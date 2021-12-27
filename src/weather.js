@@ -10,10 +10,11 @@ async function requestWeather(city, units) {
 
 async function weatherData(city = 'Kyiv', units = 'metric') {
   const weather = await requestWeather(city, units);
+  if (weather.cod !== 200) return null;
   return {
     city: weather.name,
     country: weather.sys.country,
-    temp: weather.main.temp,
+    temp: Math.round(weather.main.temp),
     humidity: weather.main.humidity,
     windSpeed: weather.wind.speed,
     weatherId: weather.weather[0].id,
