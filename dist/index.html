@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital@1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;300;400&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -28,8 +28,11 @@
           <input type="text" value="Wroclaw" />
           <button type="button" id="search">Search</button>
         </div>
-
-        <p id="error"></p>
+        <span id="error"></span>
+        <label for="mode">
+          <span>Metric mode</span>
+          <input type="checkbox" name="mode" id="mode" checked />
+        </label>
       </div>
       <div class="details">
         <span>Weather details</span>

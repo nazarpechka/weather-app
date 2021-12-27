@@ -52,7 +52,7 @@ export function displayWeather(data) {
   city.textContent = `${data.city}, ${data.country}`;
   [icon.className, name.textContent] = getIcon(data.id);
   humidity.textContent = `${data.humidity}%`;
-  wind.textContent = `${data.wind} km/h`;
+  wind.textContent = data.wind;
   feelsLike.textContent = `${data.feelsLike}°`;
   tempMin.textContent = `${data.tempMin}°`;
   tempMax.textContent = `${data.tempMax}°`;
