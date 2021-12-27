@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/weather-icons.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,12 +17,42 @@
   <body>
     <div class="left-container">
       <span id="temp"></span>
-      <span id="city"></span>
+      <div>
+        <span id="city"></span>
+        <div class="status"><span id="name"></span> <i id="icon"></i></div>
+      </div>
     </div>
     <div class="right-container">
-      <div class="city-search">
-        <input type="text" value="Wroclaw" />
-        <button type="button" id="search">Search</button>
+      <div class="search">
+        <div class="search-form">
+          <input type="text" value="Wroclaw" />
+          <button type="button" id="search">Search</button>
+        </div>
+
+        <p id="error"></p>
+      </div>
+      <div class="details">
+        <span>Weather details</span>
+        <div id="humidity">
+          <span>Humidity</span>
+          <span id="humidity-value"></span>
+        </div>
+        <div id="wind">
+          <span>Wind</span>
+          <span id="wind-value"></span>
+        </div>
+        <div id="feelsLike">
+          <span>Feels like</span>
+          <span id="feelsLike-value"></span>
+        </div>
+        <div id="tempMin">
+          <span>Minimum temperature</span>
+          <span id="tempMin-value"></span>
+        </div>
+        <div id="tempMax">
+          <span>Maximum temperature</span>
+          <span id="tempMax-value"></span>
+        </div>
       </div>
     </div>
 

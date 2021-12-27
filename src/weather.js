@@ -15,10 +15,13 @@ async function weatherData(city = 'Kyiv', units = 'metric') {
     city: weather.name,
     country: weather.sys.country,
     temp: Math.round(weather.main.temp),
+    feelsLike: Math.round(weather.main.feels_like),
+    tempMin: Math.round(weather.main.temp_min),
+    tempMax: Math.round(weather.main.temp_max),
     humidity: weather.main.humidity,
-    windSpeed: weather.wind.speed,
-    weatherId: weather.weather[0].id,
-    weatherName: weather.weather[0].main,
+    wind: Math.round(weather.wind.speed),
+    id: weather.weather[0].id,
+    name: weather.weather[0].main,
   };
 }
 
